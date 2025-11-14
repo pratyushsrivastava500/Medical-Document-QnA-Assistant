@@ -1,0 +1,60 @@
+Write the **Graphs and Charts** section for a professional medical analysis report.
+
+**SPECIAL INSTRUCTIONS FOR VISUAL DATA:**
+
+You need to:
+1. Identify any numerical data, statistics, trends, or measurements in the document
+2. Describe what visual representations (charts/graphs) would be appropriate
+3. Create ASCII/text-based representations of simple data visualizations
+4. Provide clear explanations of what each chart shows
+
+**Format for each chart:**
+```
+Chart [Number]: [Chart Type] - [Title]
+
+[ASCII representation or data table]
+
+Explanation:
+[2-3 sentences explaining what this shows and its significance]
+```
+
+**Example formats you can use:**
+
+For trends over time:
+```
+Chart 1: Line Chart - Blood Glucose Levels Over 6 Months
+
+Jan  Feb  Mar  Apr  May  Jun
+150  145  140  135  130  125 mg/dL
+ |    ↘    ↘    ↘    ↘    ↘
+
+Explanation: Blood glucose levels showed consistent improvement from 150 mg/dL in January to 125 mg/dL in June, indicating effective diabetes management.
+```
+
+For comparisons:
+```
+Chart 2: Bar Chart - Treatment Outcomes
+
+Group A (Treatment): ████████████ 85% success
+Group B (Control):   ██████ 45% success
+
+Explanation: Patients receiving the treatment showed significantly higher success rates (85%) compared to the control group (45%).
+```
+
+For distributions:
+```
+Chart 3: Data Table - Patient Vitals
+
+| Measurement    | Value     | Range      | Status  |
+|---------------|-----------|------------|---------|
+| Blood Pressure | 120/80   | 90-120/60-80| Normal  |
+| Heart Rate    | 72 bpm   | 60-100 bpm | Normal  |
+| Temperature   | 98.6°F   | 97-99°F    | Normal  |
+
+Explanation: All vital signs are within normal ranges, indicating stable patient condition.
+```
+
+**Source Material to Analyze:**
+{context}
+
+Extract any numerical data, measurements, statistics, or trends. Create appropriate visual representations with clear explanations.

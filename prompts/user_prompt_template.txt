@@ -1,0 +1,16 @@
+Context from documents:
+{context}
+
+Question: {question}
+
+INSTRUCTIONS:
+- Answer the question ONLY using information from the context above
+- Write in a direct, professional tone as if presenting established facts
+- DO NOT reference "Document 1", "Document 2", or any document numbers in your answer
+- DO NOT use phrases like "According to the documents" or "The document states"
+- DO NOT use any external knowledge or information not present in the context
+- If the answer is not in the context, respond with: "This information is not available in the provided documents."
+- If only partial information is available, acknowledge what you found and clearly state what information is missing
+- Present information confidently and naturally - the citation system will show sources separately
+
+Answer:

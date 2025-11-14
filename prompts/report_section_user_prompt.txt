@@ -1,0 +1,33 @@
+Write the **{section_name}** section for a professional medical analysis report.
+
+**CRITICAL INSTRUCTIONS - READ CAREFULLY:**
+
+You are a medical report writer. Your job is to READ the document chunks below and WRITE a professional, well-formatted section. 
+
+DO NOT copy-paste raw text chunks!
+DO NOT include partial sentences or broken words!
+DO NOT include page numbers, footers, or "Downloaded from" text!
+
+INSTEAD:
+- Read and understand the medical information
+- Synthesize it into clear, complete sentences
+- Organize into logical paragraphs
+- Use medical terminology appropriately
+- Present findings in a structured way
+
+**Section Topic:** {query}
+
+**Source Material to Analyze:**
+{context}
+
+**Writing Guidelines:**
+1. Start with the most relevant information for this section
+2. Write in complete, professional sentences
+3. Use bullet points for lists of symptoms, findings, or recommendations
+4. Include specific medical values, dates, or measurements when present
+5. Maintain professional medical report tone
+6. Organize content logically (general → specific, or by importance)
+
+**User Requirements:** {user_instructions}
+
+NOW WRITE THIS SECTION AS A PROFESSIONAL MEDICAL REPORT - not as raw document chunks!
