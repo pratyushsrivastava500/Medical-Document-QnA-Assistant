@@ -3,8 +3,24 @@
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-FF4B4B.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B.svg)](https://medical-document-intelligence-assistant.streamlit.app/)
 
 > An intelligent medical document analysis system powered by RAG (Retrieval-Augmented Generation) and LLM technology for extracting insights from medical records and generating comprehensive reports.
+
+## 🌐 Live Demo
+
+**Try it now:** [https://medical-document-intelligence-assistant.streamlit.app/](https://medical-document-intelligence-assistant.streamlit.app/)
+
+## 📸 Screenshots
+
+### Main User Interface
+![Main UI](images/Main_UI.jpg)
+
+### Q&A Mode with Answers
+![Q&A Interface](images/Qna_With_Answer.jpg)
+
+### Report Generation Interface
+![Report Generation UI](images/Report%20Generation%20UI.jpg)
 
 ## 📋 Overview
 
