@@ -163,14 +163,29 @@ streamlit run app.py
 
 ### Environment Variables
 
+Create a `.env` file in the root directory with the following configurations:
+
 ```bash
-# Required
+# Euriai API Configuration (Required)
 EURIAI_API_KEY=your_api_key_here
 
-# Optional (defaults shown)
+# Model Configuration (Required)
 EURIAI_MODEL=gpt-4.1-nano
 EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+
+# RAG Configuration (Optional - defaults shown)
+CHUNK_SIZE=1000
+CHUNK_OVERLAP=200
+TOP_K_RESULTS=5
 ```
+
+**Configuration Details:**
+- `EURIAI_API_KEY`: Your Euriai API key for LLM access (obtain from [Euriai](https://euriai.com))
+- `EURIAI_MODEL`: The LLM model to use (default: gpt-4.1-nano)
+- `EMBEDDING_MODEL`: Model for generating document embeddings (default: sentence-transformers/all-MiniLM-L6-v2)
+- `CHUNK_SIZE`: Size of text chunks for document processing (default: 1000 characters)
+- `CHUNK_OVERLAP`: Overlap between chunks to maintain context (default: 200 characters)
+- `TOP_K_RESULTS`: Number of relevant chunks to retrieve for context (default: 5)
 
 ### Custom Prompts
 
