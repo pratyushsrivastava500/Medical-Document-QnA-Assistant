@@ -1,6 +1,6 @@
 # 🏥 Medical Document Q&A Assistant
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-FF4B4B.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -45,7 +45,7 @@ The Medical Document Q&A Assistant is a sophisticated application that enables h
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8 or higher
+- Python 3.10 (strictly required)
 - Tesseract OCR (for image processing)
 - Euriai API key
 
