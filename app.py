@@ -43,7 +43,7 @@ st.set_page_config(
 )
 
 # Load background image
-bg_image = get_base64_image("clipboard-stethoscope.jpg")
+bg_image = get_base64_image("images/clipboard-stethoscope.jpg")
 
 # Custom CSS with medical background
 st.markdown(f"""
