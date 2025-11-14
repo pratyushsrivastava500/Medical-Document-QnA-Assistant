@@ -21,7 +21,6 @@ class ReportGenerator:
         "introduction",
         "clinical_findings",
         "patient_tables",
-        "graphs_and_charts",
         "diagnosis",
         "treatment_plan",
         "summary"
@@ -147,7 +146,6 @@ class ReportGenerator:
             "introduction": "introduction, background, patient information, overview",
             "clinical_findings": "clinical findings, observations, examination results, test results",
             "patient_tables": "patient data tables, measurements, lab results, vitals",
-            "graphs_and_charts": "charts, graphs, figures, diagrams, visual data",
             "diagnosis": "diagnosis, medical conditions, diseases, disorders identified",
             "treatment_plan": "treatment, therapy, medication, intervention, care plan",
             "summary": "summary, conclusion, recommendations, follow-up"
@@ -215,44 +213,19 @@ class ReportGenerator:
         # Create enhanced prompt for professional report writing
         system_prompt = self._create_report_writing_prompt(section_name, needs_summary)
         
-        # Special handling for graphs and charts section
-        if section_name == "graphs_and_charts":
-            # Load graphs/charts specific prompt
-            graphs_prompt_path = os.path.join('prompts', 'graphs_charts_user_prompt.txt')
-            try:
-                with open(graphs_prompt_path, 'r', encoding='utf-8') as f:
-                    user_prompt = f.read().format(context=context)
-            except Exception as e:
-                # Fallback to hardcoded prompt
-                user_prompt = f"""Write the **Graphs and Charts** section for a professional medical analysis report.
-
-**SPECIAL INSTRUCTIONS FOR VISUAL DATA:**
-
-You need to:
-1. Identify any numerical data, statistics, trends, or measurements in the document
-2. Describe what visual representations (charts/graphs) would be appropriate
-3. Create ASCII/text-based representations of simple data visualizations
-4. Provide clear explanations of what each chart shows
-
-**Source Material to Analyze:**
-{context}
-
-Extract any numerical data, measurements, statistics, or trends. Create appropriate visual representations with clear explanations.
-"""
-        else:
-            # Load standard section prompt
-            section_prompt_path = os.path.join('prompts', 'report_section_user_prompt.txt')
-            try:
-                with open(section_prompt_path, 'r', encoding='utf-8') as f:
-                    user_prompt = f.read().format(
-                        section_name=section_name.replace('_', ' ').title(),
-                        query=query,
-                        context=context,
-                        user_instructions=user_instructions if user_instructions else "Write clear, professional medical content"
-                    )
-            except Exception as e:
-                # Fallback to hardcoded prompt
-                user_prompt = f"""Write the **{section_name.replace('_', ' ').title()}** section for a professional medical analysis report.
+        # Load standard section prompt
+        section_prompt_path = os.path.join('prompts', 'report_section_user_prompt.txt')
+        try:
+            with open(section_prompt_path, 'r', encoding='utf-8') as f:
+                user_prompt = f.read().format(
+                    section_name=section_name.replace('_', ' ').title(),
+                    query=query,
+                    context=context,
+                    user_instructions=user_instructions if user_instructions else "Write clear, professional medical content"
+                )
+        except Exception as e:
+            # Fallback to hardcoded prompt
+            user_prompt = f"""Write the **{section_name.replace('_', ' ').title()}** section for a professional medical analysis report.
 
 **CRITICAL INSTRUCTIONS - READ CAREFULLY:**
 
@@ -419,7 +392,6 @@ NOW WRITE THIS SECTION AS A PROFESSIONAL MEDICAL REPORT - not as raw document ch
             "introduction": "Introduction",
             "clinical_findings": "Clinical Findings",
             "patient_tables": "Patient Data",
-            "graphs_and_charts": "Visual Data",
             "diagnosis": "Diagnosis",
             "treatment_plan": "Treatment Plan"
         }
@@ -830,7 +802,6 @@ After the main section content, add a "Key Points" subsection with:
             "introduction": "Introduction",
             "clinical_findings": "Clinical Findings",
             "patient_tables": "Patient Data",
-            "graphs_and_charts": "Graphs and Charts",
             "diagnosis": "Diagnosis",
             "treatment_plan": "Treatment Plan",
             "summary": "Summary"

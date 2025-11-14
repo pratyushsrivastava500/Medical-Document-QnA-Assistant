@@ -193,27 +193,6 @@ class PDFExporter:
                 story.append(Paragraph(title, self.styles['SectionHeader']))
                 story.append(Spacer(1, 0.1*inch))
                 
-                # Add charts for graphs_and_charts section
-                if section_name == "graphs_and_charts" and chart_images and len(chart_images) > 0:
-                    # Add all collected charts
-                    for chart_type, fig, chart_title in chart_images:
-                        try:
-                            # Add chart title
-                            story.append(Paragraph(f"<b>{chart_title}</b>", self.styles['SubHeader']))
-                            story.append(Spacer(1, 0.1*inch))
-                            
-                            # Add chart image
-                            self._add_chart_image(fig, story, caption=chart_title)
-                            
-                            chart_index += 1
-                        except Exception as e:
-                            print(f"Error adding chart '{chart_title}' to PDF: {str(e)}")
-                            story.append(Paragraph(f"[Chart: {chart_title}]", self.styles['BodyText']))
-                            story.append(Spacer(1, 0.2*inch))
-                    
-                    # Skip adding text content since we've added charts
-                    continue
-                
                 # Add tables for patient_tables section
                 if section_name == "patient_tables" and content:
                     # Extract and format tables from content
@@ -362,7 +341,6 @@ class PDFExporter:
             "introduction": "Introduction",
             "clinical_findings": "Clinical Findings",
             "patient_tables": "Patient Data Tables",
-            "graphs_and_charts": "Graphs and Charts",
             "diagnosis": "Diagnosis",
             "treatment_plan": "Treatment Plan",
             "summary": "Summary"

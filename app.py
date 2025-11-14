@@ -832,8 +832,8 @@ def display_report_interface(report_generator, pdf_exporter=None):
                     # Display each section - simple text display only
                     sections = report.get("generated_sections", {})
                     for section_name, section_data in sections.items():
-                        # Skip patient_tables and graphs_and_charts sections
-                        if section_name in ["patient_tables", "graphs_and_charts"]:
+                        # Skip patient_tables section
+                        if section_name in ["patient_tables"]:
                             continue
                             
                         title = section_titles.get(section_name, section_name.replace("_", " ").title())
