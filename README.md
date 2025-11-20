@@ -291,3 +291,10 @@ For questions or support, please open an issue on GitHub.
 
 **⚠️ Disclaimer**: This tool is for informational purposes only and should not replace professional medical advice, diagnosis, or treatment.
 
+---
+
+<p align="center">
+  ⭐ <b>If you find this repository helpful, please consider giving it a star!</b> ⭐
+</p>
+
+
